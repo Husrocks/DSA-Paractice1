@@ -1,39 +1,71 @@
+#include <bits/stdc++.h>
+using namespace std;
+//Pairs 
 
-#include <iostream>
-using namespace std;    
-int main() {
+void explainPair(){
+    pair<int , int> p={1,6};
+    cout<<p.first<<" "<<p.second<<endl;
+    pair<int,string> p2={200,"hussnain"};
+    cout<<p2.first<<" "<<p2.second<<endl;
+    pair<int , pair<int,int>>p3={10,{20,90}};
+    cout<<p3.first<<" "<<p3.second.first<<" "<<p3.second.second<<endl;
+    //we can also use pairs in arrays
+    pair<int,int> array[]={{1,3},{2,4},{4,8}};
+    cout<<array[1].second<<endl;
 
-  /*  FOr LOOp
-
-    int i;
-    for(i=5 ; i>=0;  i =  i-1){   // Initialize i to 5 and decrement it until it is less than 0
-        cout << "Hey" << i<<endl;  // Print the value of i
     }
-
-   While Loop
-
-    int i=1; // Initialize i to 1
-
-    while(i<=5) {           //check if i is less than or equal to 5
-        cout << "Hey" << i << endl;     // Print the value of i
-        i = i + 1;                           // Increment i by 1
-    }
-        */
-
-    // Do While Loop
-    int i = 2; // Initialize i to 2
-    do{
-        cout << "Hey" << i << endl; // Print the value of i
-        i = i + 1; // Increment i by 1
-    }
-    while(i <= 1); // Continue the loop while i is less than or equal to 1 but it is not so
-
-    cout << i << endl; // Print the final value of i after the loop
-
-    // The output will be:
-    // Hey 2
-    // 3
-
     
+
+    //vector
+    void explainVector(){
+        vector<int> v;
+        v.push_back(1);
+        v.emplace_back(2);
+        v.push_back(3);
+
+        vector<pair<int,int>> vec;
+        vec.push_back({1,2});
+        vec.emplace_back(3,4);
+
+
+        vector<int> v1(5,100); //5 elments of 100
+        vector<int> v2(5,10);
+        v2[4] = 50;
+        v2[3] = 40;
+        v2[2] = 30;
+        v2[1] = 20;
+        vector<int> v3(5);
+        vector<int> v4(v3); //copy v1 in v2
+        vector<int>::iterator it = v2.begin();
+        it++;
+        cout<<*(it)<<" "<<endl;
+        it = it+2;
+        cout<<*(it)<<endl;
+
+        cout<<v[0]<<" "<<v2.at(0);
+        cout<<v.back()<<" "<<endl;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+int main(){
+
+    // explainPair();
+    explainVector();
     return 0;
 }
