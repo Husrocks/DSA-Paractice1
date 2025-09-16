@@ -1,2 +1,1 @@
-  // print(i, n);
-    // print2(i,n);
+ // cout<<f1(n)<<endl;
